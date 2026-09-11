@@ -35,6 +35,7 @@ body {
 }
 button {
   font: inherit;
+  color: inherit; /* evita il nero di default dei <button> (es. testo delle mode-card) */
   cursor: pointer;
 }
 input {
@@ -784,18 +785,15 @@ h4 {
   border-color: var(--ok);
   background: var(--ok-soft);
 }
-.option-correct .option-letter,
+/* Correct/wrong: il badge lettera resta neutro (sempre leggibile in entrambi i temi);
+   lo stato è comunicato da bordo + sfondo dell'opzione e dal segno ✓/✗. */
 .option-correct .option-flag {
   color: var(--ok);
-}
-.option-correct .option-letter {
-  background: color-mix(in srgb, var(--ok) 22%, transparent);
 }
 .option-wrong {
   border-color: var(--bad);
   background: var(--bad-soft);
 }
-.option-wrong .option-letter,
 .option-wrong .option-flag {
   color: var(--bad);
 }
